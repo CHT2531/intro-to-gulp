@@ -1,4 +1,6 @@
 #Intro to Gulp
+The following instructions provide an introduction to the Gulp task runner. The completed project can be found in the *text-gulp* folder. 
+
 First we need to install gulp. Open a node.js Command Prompt and enter the following:
 ```
 npm install gulp -g
