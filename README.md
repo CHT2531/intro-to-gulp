@@ -5,7 +5,7 @@ First we need to install gulp. Open a node.js Command Prompt and enter the follo
 ```
 npm install gulp -g
 ```
-Navigate to the a directory where you want to set up a gulp project. Then make a new directory e.g.
+Navigate to the directory where you want to set up a gulp project. Then make a new directory e.g.
 ```
 mkdir test-gulp
 ```
@@ -13,7 +13,7 @@ Change to this directory
 ```
 cd test-gulp
 ```
-Create a new project
+Create a new Node.js project
 ```
 npm init
 ```
@@ -24,7 +24,7 @@ npm install gulp --save-dev
 Now we are ready to start
 
 ##Project Structure
-A typical front-end development project has a structure like the following:
+A typical front-end development project has a structure similar to the following:
 <pre>
 /project/
     ¦-- node_modules/
@@ -144,7 +144,7 @@ gulp less
 * Check to see that a *css* folder has been generated for you
 * Refresh your page in a browser, the page should now be styled. 
 
-##Browser testing made easy with Browsersync
+##Browser testing with Browsersync
 
 We need to install the Browsersync plug-in
 ```
@@ -188,7 +188,7 @@ The task looks a little different. All we are doing is specifying options for th
 * In the Command Prompt hit *ctrl+c* to stop Browsersync running
 
 ##Watch mode
-Gulp allows us to watch files, monitor them and if a change is made run a task automatically. We will set gulp up to watch our *index.html* page. If we make changes to it, it will be reloaded the browser automatically. 
+Gulp allows us to watch files, monitor them, and if a change is made run a task automatically. We will set gulp up to watch our *index.html* page. If we make changes to it, it will be reloaded in the browsers automatically. 
 
 * Modify the gulpfile so it looks like the following
 
@@ -270,7 +270,7 @@ The final version of the website that we serve to users will be different from t
 2. Images are optimised in the production copy.
 3. CSS, JS and HTML are minified in the production, no need to do this for development.
 
-We can write a gulp task that will generate production version of our application for us. 
+We can write a gulp task that will generate production version of our application for us. This production version will be output to the *dist* (for distirbution) folder. 
 
 ###Moving files
 Let's create a gulp task that will move the html files from the *app* folder to the *dist* folder. 
@@ -283,7 +283,7 @@ gulp.task('move-html', function() {
 ```
 
 This simple selects all the html files in the *app* folder and moves them into the *dist* folder. 
-* Check this works (note the folder structure has remained the same). 
+* Check this works (note the folder structure in *dist* mirrors the structure in *app* ). 
 
 ###Minifying CSS
 Another common task is to minimise the CSS. We will use a plug-in *gulp-cssnano* to do this. In the Command Prompt:
