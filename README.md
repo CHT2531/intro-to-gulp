@@ -216,7 +216,6 @@ gulp.task('browserSync', function() {
 
 gulp.task('browserSyncReload', function(){
   browserSync.reload();
-  done();
 })
 
 gulp.task('watch',['browserSync'],function(){
